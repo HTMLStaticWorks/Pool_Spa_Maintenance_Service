@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description" content="Client Login - Access the AquaElite client dashboard to review water logs, edit schedules, and process payments.">
+  <title>Login - AquaElite Client Portal</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Floating Toggles for Demo Control -->
+  <div class="page-top-actions">
+    <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+      <i class="fas fa-exchange-alt"></i>
+    </button>
+  </div>
+
+  <section class="auth-page">
+    
+    <!-- Centered Login Form -->
+    <div class="auth-container">
+      <div class="glass-panel auth-card">
+        
+
+        
+        <!-- Logo for mobile/compact view -->
+        <a href="index.html" class="logo auth-logo">
+          <i class="fas fa-swimming-pool"></i> AQUA<span>ELITE</span>
+        </a>
+        
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Enter your credentials to enter your client dashboard.</p>
+        
+        <form class="validated-form">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" class="form-control" placeholder="client@example.com" required>
+            <span class="error-msg">Please enter a valid email address.</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="password-input-wrapper">
+              <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required>
+              <button type="button" class="eye-toggle-btn" onclick="togglePassword('loginPassword', this)" aria-label="Toggle password visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <span class="error-msg">Password is required.</span>
+          </div>
+          
+          <div class="auth-meta">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <input type="checkbox" style="cursor: pointer;"> Remember Me
+            </label>
+            <a href="coming-soon.html" style="color: var(--secondary-light); font-weight: 500;">Forgot Password?</a>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In <i class="fas fa-sign-in-alt"></i></button>
+        </form>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <p style="font-size: 0.9rem;">New client? <a href="register.html" style="color: var(--secondary-light); font-weight: 600;">Request Portal Account</a></p>
+        </div>
+        
+        <!-- Social Login UI -->
+        <div style="border-top: 1px solid var(--border-color); margin-top: 2rem; padding-top: 1.5rem; text-align: center;">
+          <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Or Login With</span>
+          <div class="social-login-grid">
+            <button class="social-btn"><i class="fab fa-google"></i> Google</button>
+            <button class="social-btn"><i class="fab fa-apple"></i> Apple</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- JavaScript Bundle -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.replace('fa-eye', 'fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.replace('fa-eye-slash', 'fa-eye');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description" content="Read full article on pool water chemistry, pH calibration, and sanitizer balancing on the AquaElite blog.">
+  <title>Understanding Pool pH Dynamics - AquaElite Blog</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-swimming-pool"></i> AQUA<span>ELITE</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link btn btn-secondary login-nav-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+        
+        <!-- Mobile/Tablet Toggle Buttons -->
+        <div class="mobile-toggle-actions">
+          <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+          <i class="fas fa-exchange-alt"></i>
+        </button>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Hero -->
+  <section class="section-padding" style="background-color: var(--hero-light-blue); padding-top: 10rem; padding-bottom: 6rem; transition: background-color var(--transition-normal);">
+    <div class="container text-center">
+      <div style="display: flex; justify-content: center; gap: 1rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+        <span><i class="far fa-calendar"></i> <span id="articleDate">June 15, 2026</span></span>
+        <span><i class="far fa-folder"></i> <span id="articleCategory">Water Chemistry</span></span>
+      </div>
+      <h1 style="font-size: 2.75rem; line-height: 1.2; margin: 0 auto 1.5rem; max-width: 800px; text-align: center;" id="articleTitle">Understanding Swimming Pool pH Dynamics</h1>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-align: start;">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=facearea&facepad=2&w=150&h=150" alt="Dr. Charles Miller" style="width: 45px; height: 45px; border-radius: 50%;" id="authorImage">
+        <div>
+          <span style="font-weight: 600; display: block; font-size: 0.95rem;" id="authorName">Dr. Charles Miller</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);" id="authorRole">Lead Water Biochemist, AquaElite</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Main Content & Tips -->
+  <section class="section-padding" style="padding-top: 2rem;">
+    <div class="container">
+      <article class="blog-article">
+        <img src="assets/images/Understanding Swimming Pool pH Dynamics.png" alt="Understanding Swimming Pool pH Dynamics" id="articleMainImage">
+        
+        <div class="blog-content">
+          <p id="articleP1">Maintaining a swimming pool or luxury spa involves more than just skimming leaves and vacuuming sediment. The true foundation of crystal-clear water lies in its microscopic biochemistry. Among all chemical measurements, the potential of Hydrogen (pH) is arguably the most critical parameter to monitor. The pH scale measures how acidic or basic your pool water is, operating on a logarithmic scale from 0 to 14, with 7.0 representing absolute neutrality.</p>
+          
+          <h2 style="font-size: 1.75rem; margin: 2rem 0 1rem;" id="articleSub1">The Perfect Balance Window (7.2 to 7.6)</h2>
+          <p id="articleP2">For swimming pool water, the ideal range is strictly bounded between 7.2 and 7.6. This specific window is not selected arbitrarily; it aligns directly with the natural pH of human eyes and skin (approximately 7.4). Swimmers experience discomfort and red eyes when water drifts outside this range, regardless of chlorine volumes.</p>
+          
+          <blockquote style="border-inline-start: 4px solid var(--secondary-light); padding-inline-start: 1.5rem; margin: 2rem 0; font-style: italic; color: var(--text-muted);" id="articleQuote">
+            "When pH levels surge above 7.8, the sanitizing efficacy of standard free chlorine drops by over 50%. You are essentially throwing away half of your sanitizer budget."
+          </blockquote>
+          
+          <h2 style="font-size: 1.75rem; margin: 2rem 0 1rem;" id="articleSub2">Consequences of Unbalanced pH</h2>
+          <p id="articleP3">If water pH drops below 7.2, the water becomes acidic. Acidic water is highly corrosive, gradually eating away at the copper heat exchangers in pool heaters, etching concrete plaster walls, and wrinkling vinyl liners. Conversely, if pH levels climb above 7.6, the water becomes alkaline and scale-forming. This triggers calcium precipitation, turning the water cloudy, clogging filters, and leaving hard white calcium lines along tiles.</p>
+
+          <!-- 3. Maintenance Tips Checklist -->
+          <div class="glass-panel" style="padding: 2rem; margin: 3rem 0;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem;" id="checklistTitle"><i class="fas fa-clipboard-list" style="color: var(--secondary-light);"></i> Pro-Active pH Control Checklist</h3>
+            <ul class="package-features" id="checklistItems">
+              <li><i class="fas fa-check"></i> <strong>Check Alkalinity First:</strong> Total Alkalinity acts as a buffer. Keep it between 80–120 ppm before adjusting pH.</li>
+              <li><i class="fas fa-check"></i> <strong>Use Sodium Bisulfate to Lower:</strong> Add pH Decreaser slowly in front of return lines with pumps running.</li>
+              <li><i class="fas fa-check"></i> <strong>Use Soda Ash to Raise:</strong> Only add pH Increaser when levels drop below 7.2.</li>
+              <li><i class="fas fa-check"></i> <strong>Log Digitally:</strong> Keep active records of weekly checks to observe mechanical scaling trends.</li>
+            </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Related Articles Section (Full Container Width: 1280px) -->
+  <section class="section-padding" style="background: var(--bg-secondary); padding-top: 5rem; padding-bottom: 5rem; transition: background var(--transition-normal);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 3.5rem;">
+        <span class="section-tag">Read Next</span>
+        <h2 class="section-title">Related Pool Care Guides</h2>
+        <p>Expand your knowledge with these expert maintenance and design guides.</p>
+      </div>
+      <div class="grid-4 related-blog-grid">
+        <!-- Card 1 -->
+        <div class="premium-card blog-card">
+          <img src="assets/images/Eco-Speed Pumps Guide.png" alt="Variable Speed Pumps">
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Variable Speed Pumps</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Lower energy bills and reduce pump pressure with dynamic speed setups.</p>
+          <a href="#" class="btn btn-secondary card-action-btn" style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%;">Read Article</a>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="premium-card blog-card">
+          <img src="assets/images/Algae Mitigation Strategy.png" alt="Algae Mitigation">
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Algae Mitigation</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Eradicate mustard and green algae blooms with metal calibration.</p>
+          <a href="#" class="btn btn-secondary card-action-btn" style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%;">Read Article</a>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="premium-card blog-card">
+          <img src="assets/images/Why Ozone Beats Chlorine.png" alt="Ozone Technology">
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Ozone Technology</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Why eco-friendly ozone gas sanitation beats aggressive chlorination.</p>
+          <a href="#" class="btn btn-secondary card-action-btn" style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%;">Read Article</a>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="premium-card blog-card">
+          <img src="assets/images/Perfect Spa Calibrations.png" alt="Hot Tub Jet Tuning">
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Hot Tub Jet Tuning</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Flushing organic sludge and scaling deposits from spa piping chambers.</p>
+          <a href="#" class="btn btn-secondary card-action-btn" style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%;">Read Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments Section (Centered Width: 800px) -->
+  <section class="section-padding" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <div class="container" style="max-width: 800px;">
+      <!-- 5. Comments Section Design -->
+      <div class="comment-list" style="margin-top: 0;">
+        <h3 style="font-size: 1.75rem; margin-bottom: 2rem; text-align: center;" id="commentsHeading">Join the Discussion</h3>
+        
+        <div id="commentsContainer">
+          <!-- Comment 1 -->
+          <div class="comment-item">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=150&h=150" alt="Client Avatar" class="comment-avatar">
+            <div>
+              <span style="font-weight: 600; font-size: 0.95rem;">Marcus Vance</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">June 16, 2026 at 9:30 AM</span>
+              <p style="font-size: 0.95rem;">This explained perfectly why my heater was rusting! Our previous service kept our pH extremely low to avoid cloudiness, but it completely corroded our heater manifold. Getting an ozone system installed next month.</p>
+            </div>
+          </div>
+          
+          <!-- Comment 2 -->
+          <div class="comment-item">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=150&h=150" alt="Client Avatar" class="comment-avatar">
+            <div>
+              <span style="font-weight: 600; font-size: 0.95rem;">Helena Sterling</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">June 15, 2026 at 4:15 PM</span>
+              <p style="font-size: 0.95rem;">Excellent scientific breakdown. Do you provide digital testing kits to homeowners, or is this only done by your on-site valet technicians?</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mock Comment Form -->
+        <div class="glass-panel" style="padding: 2.5rem; margin-top: 3rem;">
+          <h4 style="margin-bottom: 1rem;">Post a Comment</h4>
+          <form class="validated-form">
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="commenterName">Name</label>
+                <input type="text" id="commenterName" class="form-control" required placeholder="Your Name">
+                <span class="error-msg">Name is required.</span>
+              </div>
+              <div class="form-group">
+                <label for="commenterEmail">Email</label>
+                <input type="email" id="commenterEmail" class="form-control" required placeholder="your@email.com">
+                <span class="error-msg">Enter a valid email.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="commentText">Comment</label>
+              <textarea id="commentText" class="form-control" required placeholder="Type your comment..."></textarea>
+              <span class="error-msg">Comment text cannot be empty.</span>
+            </div>
+            
+            <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+              <button type="submit" class="btn btn-primary">Post Comment <i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (SAME ACROSS ALL PAGES) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <i class="fas fa-swimming-pool"></i> AQUA<span>ELITE</span>
+          </a>
+          <p>Experience the ultimate in bespoke pool care and elite spa services. We keep your pristine water safe, sanitary, and spectacularly clear year-round.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home 1</a></li>
+            <li><a href="home-2.html"><i class="fas fa-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="pricing.html"><i class="fas fa-chevron-right"></i> Our Pricing</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Get in Touch</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Pool Cleaning</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Spa Maintenance</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Water Treatment</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Equipment Repair</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Automation & Lighting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul class="contact-info-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>128 Ocean View Drive, Luxury Heights, CA 90210</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (800) 555-POOL (7665)</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>service@aquaelitepool.com</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 AquaElite Pool & Spa Maintenance Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- JavaScript Bundle -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const articleData = {
+        'ph-dynamics': {
+          date: "June 15, 2026",
+          category: "Water Chemistry",
+          title: "Understanding Swimming Pool pH Dynamics",
+          authorImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&crop=faces&w=150&h=150",
+          authorName: "Dr. Charles Miller",
+          authorRole: "Lead Water Biochemist, AquaElite",
+          mainImage: "assets/images/Understanding Swimming Pool pH Dynamics.png",
+          p1: "Maintaining a swimming pool or luxury spa involves more than just skimming leaves and vacuuming sediment. The true foundation of crystal-clear water lies in its microscopic biochemistry. Among all chemical measurements, the potential of Hydrogen (pH) is arguably the most critical parameter to monitor. The pH scale measures how acidic or basic your pool water is, operating on a logarithmic scale from 0 to 14, with 7.0 representing absolute neutrality.",
+          sub1: "The Perfect Balance Window (7.2 to 7.6)",
+          p2: "For swimming pool water, the ideal range is strictly bounded between 7.2 and 7.6. This specific window is not selected arbitrarily; it aligns directly with the natural pH of human eyes and skin (approximately 7.4). Swimmers experience discomfort and red eyes when water drifts outside this range, regardless of chlorine volumes.",
+          quote: "When pH levels surge above 7.8, the sanitizing efficacy of standard free chlorine drops by over 50%. You are essentially throwing away half of your sanitizer budget.",
+          sub2: "Consequences of Unbalanced pH",
+          p3: "If water pH drops below 7.2, the water becomes acidic. Acidic water is highly corrosive, gradually eating away at the copper heat exchangers in pool heaters, etching concrete plaster walls, and wrinkling vinyl liners. Conversely, if pH levels climb above 7.6, the water becomes alkaline and scale-forming. This triggers calcium precipitation, turning the water cloudy, clogging filters, and leaving hard white calcium lines along tiles.",
+          checklistTitle: "Pro-Active pH Control Checklist",
+          checklistItems: [
+            "<strong>Check Alkalinity First:</strong> Total Alkalinity acts as a buffer. Keep it between 80–120 ppm before adjusting pH.",
+            "<strong>Use Sodium Bisulfate to Lower:</strong> Add pH Decreaser slowly in front of return lines with pumps running.",
+            "<strong>Use Soda Ash to Raise:</strong> Only add pH Increaser when levels drop below 7.2.",
+            "<strong>Log Digitally:</strong> Keep active records of weekly checks to observe mechanical scaling trends."
+          ],
+          comments: [
+            {
+              avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Marcus Vance",
+              time: "June 16, 2026 at 9:30 AM",
+              text: "This explained perfectly why my heater was rusting! Our previous service kept our pH extremely low to avoid cloudiness, but it completely corroded our heater manifold. Getting an ozone system installed next month."
+            },
+            {
+              avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Helena Sterling",
+              time: "June 15, 2026 at 4:15 PM",
+              text: "Excellent scientific breakdown. Do you provide digital testing kits to homeowners, or is this only done by your on-site valet technicians?"
+            }
+          ]
+        },
+        'pumps': {
+          date: "June 12, 2026",
+          category: "Pumps",
+          title: "Eco-Speed Pumps Guide",
+          authorImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=150&h=150",
+          authorName: "Thomas Wright",
+          authorRole: "Lead Mechanical Engineer, AquaElite",
+          mainImage: "assets/images/Eco-Speed Pumps Guide.png",
+          p1: "Variable-speed pumps represent the single most important advancement in pool mechanical design in the last two decades. Unlike single-speed pumps that run at full capacity constantly, variable-speed pumps can be programmed to run at lower speeds for longer cycles, drastically reducing power consumption and wear on equipment.",
+          sub1: "Understanding Energy Flow Rates",
+          p2: "According to the affinity laws of hydraulics, cutting a pump's motor speed in half reduces its energy usage to just one-eighth of what it consumes at full speed. This means running a pump at 1725 RPM instead of 3450 RPM uses 87% less energy, while still circulating sufficient water to maintain perfect clarity and chemical dispersion.",
+          quote: "By scheduling variable-speed pump cycles to match your pool volume, you can save up to $120 monthly on your utility bills while extending filter life.",
+          sub2: "Optimizing Filtration Cycles",
+          p3: "A standard pool requires at least one complete water turnover daily. By scheduling a short high-speed cycle (e.g., 2 hours for skimming and heating) followed by a long low-speed cycle (e.g., 10 hours for basic chemical filtration), you maintain a clean pool surface while running your sanitizers at maximum efficiency.",
+          checklistTitle: "Pump Programming Checklist",
+          checklistItems: [
+            "<strong>Determine Turnover Volume:</strong> Calculate your pool's total volume and divide by desired turnover time.",
+            "<strong>Schedule Dual Speeds:</strong> Run high speed for cleaning cycles and low speed for chemical dispersion.",
+            "<strong>Clean Strainer Baskets:</strong> Keep pump hair/lint pots clear of debris to prevent cavitation and drop in flow.",
+            "<strong>Inspect Shaft Seals:</strong> Check regularly for leaks near the motor interface to prevent bearing failures."
+          ],
+          comments: [
+            {
+              avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Marcus Vance",
+              time: "June 13, 2026 at 10:15 AM",
+              text: "I upgraded to a variable speed pump last month and my electricity bill has already dropped by $90! Highly recommend making the switch."
+            },
+            {
+              avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "David K.",
+              time: "June 12, 2026 at 3:30 PM",
+              text: "Is a 1.5 HP pump sufficient for a 20,000-gallon pool, or should I go with 2 HP? Our local dealer recommended the larger one."
+            }
+          ]
+        },
+        'algae': {
+          date: "June 08, 2026",
+          category: "Cleaning",
+          title: "Algae Mitigation Strategy",
+          authorImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=150&h=150",
+          authorName: "Sarah Jenkins",
+          authorRole: "Maintenance Team Lead, AquaElite",
+          mainImage: "assets/images/Algae Mitigation Strategy.png",
+          p1: "Algae spores are constantly introduced into your pool by wind, rain, and swimmers. If your sanitizer level drops even temporarily during a heatwave or heavy rain, these spores can rapidly multiply, turning a crystal-clear pool into a cloudy green mess within 24 hours.",
+          sub1: "The Three Types of Pool Algae",
+          p2: "Green algae is the most common and easiest to treat. Yellow or mustard algae behaves as a dust-like layer on walls and is highly chlorine-resistant. Black algae is the most severe, forming deep root systems in pool plaster. Recognizing the type of algae determines your chemical treatment intensity.",
+          quote: "Preventing algae blooms requires constant chemical buffer checks. Once a bloom sets in, the chemical demand to shock the pool increases tenfold.",
+          sub2: "A Comprehensive Elimination Plan",
+          p3: "To eliminate a severe algae bloom, we use a three-pronged approach: manual wall scrubbing to break the protective biofilm, chemical shocking using high-strength sodium hypochlorite, and adding specialized copper-free algaecide. Running the filter continuously and backwashing regularly is critical to capture suspended dead spores.",
+          checklistTitle: "Anti-Algae Action Items",
+          checklistItems: [
+            "<strong>Scrub Pool Hardscapes:</strong> Use a steel brush for plaster or nylon brush for vinyl liners to scrape off algae.",
+            "<strong>Shock at Sunset:</strong> Add chlorine sanitizer after dark to prevent UV rays from destroying the chlorine.",
+            "<strong>Add Algaecide and Clarifier:</strong> Use high-grade treatments to clump dead cells for easy vacuum filtration.",
+            "<strong>Clean Filters Daily:</strong> Wash cartridge elements or backwash sand/DE filters to prevent pressure spikes."
+          ],
+          comments: [
+            {
+              avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Jennifer L.",
+              time: "June 09, 2026 at 8:45 AM",
+              text: "The steel brush tip was crucial. I was using nylon on my plaster pool and it was doing nothing. Once I switched to steel, the black algae scrubbed right off!"
+            },
+            {
+              avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Robert H.",
+              time: "June 08, 2026 at 5:10 PM",
+              text: "We had a bad storm last week and the pool turned green overnight. Followed this checklist and it cleared up in 48 hours. Thank you!"
+            }
+          ]
+        },
+        'ozone': {
+          date: "May 28, 2026",
+          category: "Sanitation",
+          title: "Why Ozone Beats Chlorine",
+          authorImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&crop=faces&w=150&h=150",
+          authorName: "Dr. Charles Miller",
+          authorRole: "Lead Water Biochemist, AquaElite",
+          mainImage: "assets/images/Why Ozone Beats Chlorine.png",
+          p1: "While chlorine remains the industry standard for pool sanitization, it has significant drawbacks. High levels of free chlorine create chloramines, which are responsible for strong chemical odors, red eyes, and skin itching. Ozone gas sanitation represents a modern, eco-friendly approach to pool care.",
+          sub1: "The Science of Active Oxygen",
+          p2: "Ozone (O3) is a powerful oxidizer that reacts with organic contaminants thousands of times faster than chlorine. An ozone generator produces this active oxygen gas inside a sealed chamber in the pump room. As pool water flows through, pathogens are destroyed instantly, and the gas reverts safely back to standard oxygen (O2).",
+          quote: "By integrating an ozone generator into your circulation loop, you can reduce your pool's chlorine requirement by over 70%, resulting in silk-like water.",
+          sub2: "Balancing Ozone and Chlorine Loops",
+          p3: "Because ozone is a gas that dissolves and reacts instantly, it leaves no lasting sanitizer residual in the pool itself. Therefore, a trace level of chlorine (approx 0.5 - 1.0 ppm) is still maintained to sanitize the water inside the pool basin. This combination provides the absolute best of both worlds: premium purity and low chemical exposure.",
+          checklistTitle: "Ozone Maintenance Steps",
+          checklistItems: [
+            "<strong>Inspect Corona Discharge Cells:</strong> Ensure the electrical terminals are free from dust and moisture.",
+            "<strong>Verify Check Valves:</strong> Prevent pool water from backflowing into the ozone gas line and damaging the reactor.",
+            "<strong>Monitor ORP Levels:</strong> Keep oxidation-reduction potential above 650mV for clinical-grade purification.",
+            "<strong>Calibrate Feeders:</strong> Adjust auxiliary chlorine dosing pump rates to match the lower sanitizer demand."
+          ],
+          comments: [
+            {
+              avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Arthur M.",
+              time: "May 29, 2026 at 11:20 AM",
+              text: "Our kids had constant skin rashes from chlorine. Since switching to ozone, they can swim all day without problems. Highly recommend CD ozone generators."
+            },
+            {
+              avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Claire S.",
+              time: "May 28, 2026 at 6:40 PM",
+              text: "Do you recommend corona discharge or UV ozone systems for residential spas? The UV ones seem cheaper to install but I'm unsure on longevity."
+            }
+          ]
+        },
+        'spa': {
+          date: "May 15, 2026",
+          category: "Hot Tubs",
+          title: "Perfect Spa Calibrations",
+          authorImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=150&h=150",
+          authorName: "Thomas Wright",
+          authorRole: "Lead Mechanical Engineer, AquaElite",
+          mainImage: "assets/images/Perfect Spa Calibrations.png",
+          p1: "Hot tubs and hydrotherapy spas present unique chemical challenges due to high water temperatures (usually around 100°F - 104°F) and low water volume. This environment speeds up chemical reactions, accelerates evaporation, and leads to rapid buildup of body oils, sanitizers, and scaling compounds.",
+          sub1: "Managing the Saturation Index",
+          p2: "At higher temperatures, calcium carbonate becomes significantly less soluble, causing it to precipitate out of the water easily. This leads to heavy calcium scale deposits inside the piping, heater tubes, and pump impellers. Keeping your Langelier Saturation Index (LSI) close to 0.0 is critical.",
+          quote: "Uncalibrated spa water can ruin a high-end titanium heater element in a matter of months through rapid scale encrustation.",
+          sub2: "Systematic Jet and Filter Purging",
+          p3: "Organic debris and soap residues form thick biofilms inside the complex internal jet lines of modern spas. A standard shock treatment cannot easily penetrate these layers. Periodically, spas must be treated with a chemical purge to flush out these hidden pipelines before draining and refilling.",
+          checklistTitle: "Spa Calibration Checklist",
+          checklistItems: [
+            "<strong>Check Water pH Daily:</strong> High temperatures cause rapid pH rise; adjust with dry acid to keep between 7.2–7.4.",
+            "<strong>Flush Pipeline Jets:</strong> Use a pipe flusher treatment before every quarterly water drainage.",
+            "<strong>Recondition Cartridges:</strong> Clean cartridge filters monthly to remove body oils and prevent heater flow errors.",
+            "<strong>Test Calcium Levels:</strong> Maintain calcium hardness at a lower range (150–200 ppm) to minimize hot water scaling."
+          ],
+          comments: [
+            {
+              avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Thomas G.",
+              time: "May 16, 2026 at 9:05 AM",
+              text: "The jet purging warning is no joke. I ran a pipeline cleaner and the amount of gunk that came out was shocking. Our spa feels brand new now."
+            },
+            {
+              avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&crop=faces&w=150&h=150",
+              author: "Linda F.",
+              time: "May 15, 2026 at 4:30 PM",
+              text: "How often should dry acid be added to a hot tub under heavy use? We have guests over every weekend."
+            }
+          ]
+        }
+      };
+
+      // Get parameter from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleParam = urlParams.get('article') || 'ph-dynamics';
+      const activeArticle = articleData[articleParam] ? articleParam : 'ph-dynamics';
+      const data = articleData[activeArticle];
+
+      // Update basic fields
+      document.getElementById('articleDate').textContent = data.date;
+      document.getElementById('articleCategory').textContent = data.category;
+      document.getElementById('articleTitle').textContent = data.title;
+      
+      const authorImg = document.getElementById('authorImage');
+      authorImg.src = data.authorImage;
+      authorImg.alt = data.authorName;
+      document.getElementById('authorName').textContent = data.authorName;
+      document.getElementById('authorRole').textContent = data.authorRole;
+      
+      const mainImg = document.getElementById('articleMainImage');
+      mainImg.src = data.mainImage;
+      mainImg.alt = data.title;
+      
+      // Update body texts
+      document.getElementById('articleP1').textContent = data.p1;
+      document.getElementById('articleSub1').textContent = data.sub1;
+      document.getElementById('articleP2').textContent = data.p2;
+      
+      const quoteBlock = document.getElementById('articleQuote');
+      quoteBlock.innerHTML = `"${data.quote}"`;
+      
+      document.getElementById('articleSub2').textContent = data.sub2;
+      document.getElementById('articleP3').textContent = data.p3;
+      
+      // Update checklist
+      document.getElementById('checklistTitle').innerHTML = `<i class="fas fa-clipboard-list" style="color: var(--secondary-light);"></i> ${data.checklistTitle}`;
+      const checklistContainer = document.getElementById('checklistItems');
+      checklistContainer.innerHTML = '';
+      data.checklistItems.forEach(itemText => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="fas fa-check"></i> ${itemText}`;
+        checklistContainer.appendChild(li);
+      });
+
+      // Update comments heading and comments list
+      document.getElementById('commentsHeading').textContent = "Join the Discussion";
+      const commentsContainer = document.getElementById('commentsContainer');
+      commentsContainer.innerHTML = '';
+      data.comments.forEach(comment => {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment-item';
+        commentDiv.innerHTML = `
+          <img src="${comment.avatar}" alt="Client Avatar" class="comment-avatar">
+          <div>
+            <span style="font-weight: 600; font-size: 0.95rem;">${comment.author}</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">${comment.time}</span>
+            <p style="font-size: 0.95rem;">${comment.text}</p>
+          </div>
+        `;
+        commentsContainer.appendChild(commentDiv);
+      });
+    });
+  </script>
+</body>
+</html>

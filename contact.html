@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description" content="Contact AquaElite - Reach our pool cleaning, chemical calibration, and pump repair experts. 24/7 emergency repair line available.">
+  <title>Contact Us - AquaElite Pool Care</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-swimming-pool"></i> AQUA<span>ELITE</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="login.html" class="nav-link btn btn-secondary login-nav-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+        
+        <!-- Mobile/Tablet Toggle Buttons -->
+        <div class="mobile-toggle-actions">
+          <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+          <i class="fas fa-exchange-alt"></i>
+        </button>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Hero -->
+  <section class="section-padding" style="background-color: var(--hero-light-blue); padding-top: 10rem; padding-bottom: 6rem; transition: background-color var(--transition-normal);">
+    <div class="container text-center">
+      <span class="section-tag">Get in Touch</span>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Connect with Our Valet Teams</h1>
+      <p style="max-width: 600px; margin: 0 auto;">Schedule cleanings, book diagnostic surveys, or access our emergency help desks.</p>
+    </div>
+  </section>
+
+  <!-- Contact layout & Form -->
+  <section class="section-padding" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="contact-layout">
+        
+        <!-- 1. Contact Information Cards -->
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <h2 style="font-size: 2rem; margin-bottom: 1rem;">General Inquiries</h2>
+          <p style="margin-bottom: 1.5rem;">For billing inquiries, feedback, or custom cleaning quotes, contact our central offices during business hours.</p>
+          
+          <div class="premium-card contact-card">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3>Call Support</h3>
+              <p style="margin: 0.25rem 0;">+1 (800) 555-POOL (7665)</p>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Mon-Sat: 8:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+          
+          <div class="premium-card contact-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email Dispatch</h3>
+              <p style="margin: 0.25rem 0;">service@aquaelitepool.com</p>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">We reply within 3 working hours.</span>
+            </div>
+          </div>
+          
+          <div class="premium-card contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Central Office</h3>
+              <p style="margin: 0.25rem 0;">128 Ocean View Drive, Luxury Heights, CA 90210</p>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Appointment visits only.</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 2. Contact Form Section -->
+        <div class="glass-panel contact-form-panel">
+          <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Request On-Site Quote</h3>
+          <p style="margin-bottom: 2rem;">Complete the fields below to schedule a water chemistry and pump inspection.</p>
+          
+          <form class="validated-form">
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="contactName">Full Name *</label>
+                <input type="text" id="contactName" class="form-control" required placeholder="John Doe">
+                <span class="error-msg">Name is required.</span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-control" required placeholder="john@example.com">
+                <span class="error-msg">Enter a valid email.</span>
+              </div>
+            </div>
+            
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="contactPhone">Phone Number *</label>
+                <input type="tel" id="contactPhone" class="form-control" required placeholder="+1 (555) 000-0000">
+                <span class="error-msg">Phone number is required.</span>
+              </div>
+              <div class="form-group">
+                <label for="contactService">Select Service *</label>
+                <select id="contactService" class="form-control" required>
+                  <option value="">Choose Option</option>
+                  <option value="weekly">Weekly Valet Cleaning</option>
+                  <option value="water">Water Purification</option>
+                  <option value="equipment">Equipment Repair</option>
+                  <option value="commercial">Commercial Pool Plan</option>
+                </select>
+                <span class="error-msg">Select a service.</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactMessage">Details on Pool / Spa *</label>
+              <textarea id="contactMessage" class="form-control" required placeholder="Describe your pool dimensions, equipment details, or issues..."></textarea>
+              <span class="error-msg">Enter request details.</span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section-padding" style="padding-top: 0; padding-bottom: 5rem;">
+    <div class="container">
+      <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); box-shadow: var(--shadow-md); line-height: 0; border: 1px solid var(--border-color);">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7388277259587!2d-118.49622368478494!3d34.01188398061726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4cec2f13b63%3A0x63351d45c556b6b9!2sOcean%20View%20Dr%2C%20Santa%20Monica%2C%20CA%2090401%2C%20USA!5e0!3m2!1sen!2sin!4v1687000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="AquaElite Office Location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Service Coverage Area -->
+  <section class="section-padding" style="background: var(--bg-secondary); transition: background var(--transition-normal);">
+    <div class="container text-center">
+      <span class="section-tag">Where We Operate</span>
+      <h2 style="font-size: 2.25rem; margin-bottom: 1.5rem;">Service Coverage Areas</h2>
+      <p style="max-width: 600px; margin: 0 auto 3rem;">We actively dispatch fully stocked service units to the following southern California locations:</p>
+      
+      <div class="grid-4 text-start">
+        <div class="glass-panel" style="padding: 1.5rem 2rem;">
+          <h4 style="margin-bottom: 0.5rem;"><i class="fas fa-umbrella-beach" style="color: var(--secondary-light);"></i> Coastline</h4>
+          <p style="font-size: 0.85rem;">Malibu, Santa Monica, Venice Beach, Pacific Palisades.</p>
+        </div>
+        <div class="glass-panel" style="padding: 1.5rem 2rem;">
+          <h4 style="margin-bottom: 0.5rem;"><i class="fas fa-city" style="color: var(--secondary-light);"></i> Metro</h4>
+          <p style="font-size: 0.85rem;">Beverly Hills, Culver City, West Hollywood, Los Angeles.</p>
+        </div>
+        <div class="glass-panel" style="padding: 1.5rem 2rem;">
+          <h4 style="margin-bottom: 0.5rem;"><i class="fas fa-mountain" style="color: var(--secondary-light);"></i> Valley</h4>
+          <p style="font-size: 0.85rem;">Calabasas, Sherman Oaks, Encino, Thousand Oaks.</p>
+        </div>
+        <div class="glass-panel" style="padding: 1.5rem 2rem;">
+          <h4 style="margin-bottom: 0.5rem;"><i class="fas fa-tree" style="color: var(--secondary-light);"></i> East Side</h4>
+          <p style="font-size: 0.85rem;">Pasadena, Glendale, Arcadia, La Cañada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Emergency Service CTA -->
+  <section class="section-padding" style="background: linear-gradient(135deg, hsl(0, 60%, 15%), hsl(0, 50%, 25%)); color: #fff;">
+    <div class="container text-center">
+      <span class="section-tag" style="color: hsl(0, 80%, 75%);">Critical Support</span>
+      <h2 style="font-size: 2.25rem; margin-bottom: 1rem; color: #fff;">24/7 Urgent Repair Helpline</h2>
+      <p style="max-width: 600px; margin: 0 auto 2.5rem; color: rgba(255,255,255,0.85);">Experiencing a critical pipe freeze, severe pump leakage, major chlorine spikes, or spa heater fires? Do not wait. Call our priority dispatch center immediately.</p>
+      <a href="tel:+18005557665" class="btn btn-accent" style="background: linear-gradient(135deg, hsl(0, 80%, 60%), hsl(0, 90%, 70%)); color: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.3); font-weight: 600;">
+        <i class="fas fa-phone-alt"></i> Call Emergency Dispatch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer (SAME ACROSS ALL PAGES) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <i class="fas fa-swimming-pool"></i> AQUA<span>ELITE</span>
+          </a>
+          <p>Experience the ultimate in bespoke pool care and elite spa services. We keep your pristine water safe, sanitary, and spectacularly clear year-round.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home 1</a></li>
+            <li><a href="home-2.html"><i class="fas fa-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="pricing.html"><i class="fas fa-chevron-right"></i> Our Pricing</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Get in Touch</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Pool Cleaning</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Spa Maintenance</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Water Treatment</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Equipment Repair</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Automation & Lighting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul class="contact-info-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>128 Ocean View Drive, Luxury Heights, CA 90210</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (800) 555-POOL (7665)</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>service@aquaelitepool.com</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 AquaElite Pool & Spa Maintenance Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- JavaScript Bundle -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

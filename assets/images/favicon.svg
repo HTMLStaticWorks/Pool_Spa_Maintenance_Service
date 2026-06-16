@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Left swimmer head -->
+  <circle cx="18" cy="9" r="6.5" fill="#4a90d9"/>
+  <!-- Left swimmer body/arm -->
+  <path d="M5 22 Q12 14 22 19 Q30 23 38 19" stroke="#4a90d9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Right swimmer head -->
+  <circle cx="54" cy="9" r="6.5" fill="#4a90d9"/>
+  <!-- Right swimmer body/arm -->
+  <path d="M41 22 Q48 14 58 19 Q66 23 75 19" stroke="#4a90d9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Wave 1 -->
+  <path d="M2 38 Q11 32 20 38 Q29 44 38 38 Q47 32 56 38 Q65 44 78 38" stroke="#4a90d9" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Wave 2 -->
+  <path d="M2 50 Q11 44 20 50 Q29 56 38 50 Q47 44 56 50 Q65 56 78 50" stroke="#4a90d9" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>
