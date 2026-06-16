@@ -499,6 +499,11 @@
     @media (max-width: 991px) {
       .portal-sidebar {
         transform: translateX(-100%);
+        background: #ffffff !important;
+      }
+
+      [data-theme="dark"] .portal-sidebar {
+        background: var(--bg-secondary) !important;
       }
 
       [dir="rtl"] .portal-sidebar {
@@ -518,6 +523,39 @@
 
       .portal-hamburger {
         display: flex;
+      }
+
+      .portal-hamburger.active {
+        position: fixed;
+        top: 2.1rem;
+        left: 235px;
+        z-index: 2000;
+      }
+
+      [dir="rtl"] .portal-hamburger.active {
+        left: auto;
+        right: 235px;
+      }
+
+      .sidebar-toggles {
+        display: none !important;
+      }
+
+      .portal-nav-link {
+        color: var(--text-color) !important;
+        font-size: 1.05rem;
+      }
+
+      .portal-nav-link:hover,
+      .portal-nav-link.active {
+        color: var(--secondary-color) !important;
+        background: var(--bg-secondary) !important;
+      }
+
+      [data-theme="dark"] .portal-nav-link:hover,
+      [data-theme="dark"] .portal-nav-link.active {
+        color: var(--accent-light) !important;
+        background: rgba(255, 255, 255, 0.05) !important;
       }
     }
 
@@ -645,7 +683,7 @@
       
       <!-- CPO Technician profile panel & Logout in Sidebar Footer -->
       <div class="portal-sidebar-footer">
-        <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem; align-items: center; justify-content: center;">
+        <div class="sidebar-toggles" style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem; align-items: center; justify-content: center;">
           <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
             <i class="fas fa-moon"></i>
           </button>
@@ -678,6 +716,16 @@
           <span></span>
           <span></span>
           <span></span>
+        </div>
+        
+        <!-- Theme & RTL Toggles for Mobile -->
+        <div class="portal-top-actions">
+          <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
         </div>
       </div>
 
