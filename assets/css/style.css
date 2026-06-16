@@ -100,6 +100,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -2572,6 +2573,12 @@ textarea.form-control {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 /* Mobile overrides for Auth Pages */
 @media (max-width: 576px) {
   .auth-card {
@@ -2619,11 +2626,25 @@ textarea.form-control {
   .stats-grid {
     grid-template-columns: 1fr !important;
   }
-}
 
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+  /* Extra mobile styling improvements to prevent overflows at 320px */
+  .floating-badge {
+    right: 10px !important;
+    left: auto !important;
+    max-width: 240px !important;
+  }
+
+  [dir="rtl"] .floating-badge {
+    left: 10px !important;
+    right: auto !important;
+  }
+
+  .split-image-container img {
+    height: 320px !important;
+  }
+
+  .timeline-card {
+    padding: 1.25rem !important;
   }
 }
 
