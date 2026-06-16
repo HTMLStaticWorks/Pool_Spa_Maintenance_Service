@@ -393,7 +393,11 @@ function initFormValidation() {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
           submitBtn.style.background = '';
-        }, 3000);
+          
+          if (form.id === 'loginForm' || form.id === 'registerForm') {
+            window.location.href = 'dashboard.html';
+          }
+        }, 1500);
       }
     });
   });

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description" content="Seasonal Pool & Spa Packages - Custom opening, closing, summer maintenance, and winterizing programs by AquaElite. Keep your pool protected year-round.">
+  <title>Seasonal Packages - AquaElite Pool Care</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-swimming-pool"></i> AQUA<span>ELITE</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="seasonal-packages.html" class="nav-link active">Seasonal</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="login.html" class="nav-link btn btn-secondary login-nav-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+        
+        <!-- Mobile/Tablet Toggle Buttons -->
+        <div class="mobile-toggle-actions">
+          <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+          <i class="fas fa-exchange-alt"></i>
+        </button>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section-padding" style="background-color: var(--hero-light-blue); padding-top: 10rem; padding-bottom: 6rem; transition: background-color var(--transition-normal);">
+    <div class="container text-center">
+      <span class="section-tag">Year-Round Care Cycles</span>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Seasonal Specialty Programs</h1>
+      <p style="max-width: 600px; margin: 0 auto;">Keep your aquatic retreat protected, pristine, and perfectly balanced through every phase of the changing seasons.</p>
+    </div>
+  </section>
+
+  <!-- Seasonal Packages Grid -->
+  <section class="section-padding" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Program Options</span>
+        <h2 class="section-title">Select Your Seasonal Plan</h2>
+        <p>Choose a dedicated single-service prep package or subscribe to our year-round seasonal care sequence.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Spring Startup -->
+        <div class="premium-card">
+          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600&auto=format&fit=crop" alt="Spring Startup Care">
+          <span class="badge-season spring">Spring Startup</span>
+          <h3>Spring Re-Opening</h3>
+          <div style="font-size: 1.85rem; font-weight: 600; font-family: var(--font-heading); margin-bottom: 1rem;">$250 <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 450;">/one-time</span></div>
+          <p>Get your pool ready for swim season. We remove and clean covers, clear winter sludge, verify pump operation, and shock chemical levels.</p>
+          <ul class="package-features" style="margin-bottom: 1.5rem;">
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Cover storage & cleaning</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Debris skimming & brushing</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> 2-Phase shock & balance treatment</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Mechanical pump inspection</li>
+          </ul>
+          <button onclick="selectPackage('spring')" class="btn btn-primary card-action-btn" style="width: 100%;">Book Spring Startup <i class="fas fa-calendar-plus"></i></button>
+        </div>
+
+        <!-- Summer Peak Care -->
+        <div class="premium-card">
+          <img src="https://images.unsplash.com/photo-1562790351-d273a961e0e9?q=80&w=600&auto=format&fit=crop" alt="Summer Pool Valet">
+          <span class="badge-season summer">Summer Peak</span>
+          <h3>Peak Summer Valet</h3>
+          <div style="font-size: 1.85rem; font-weight: 600; font-family: var(--font-heading); margin-bottom: 1rem;">$190 <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 450;">/month</span></div>
+          <p>High-frequency maintenance when bather loads peak. We manage sanitizer evaporation, control algae blooms, and clean filters.</p>
+          <ul class="package-features" style="margin-bottom: 1.5rem;">
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Weekly vacuuming & skimming</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Algae prevention chemistry</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Cartridge/Sand filter flush</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Water levels check</li>
+          </ul>
+          <button onclick="selectPackage('summer')" class="btn btn-primary card-action-btn" style="width: 100%;">Book Summer Care <i class="fas fa-calendar-plus"></i></button>
+        </div>
+
+        <!-- Autumn Preservation -->
+        <div class="premium-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Autumn Pool Care">
+          <span class="badge-season autumn">Autumn Prep</span>
+          <h3>Autumn Preservation</h3>
+          <div style="font-size: 1.85rem; font-weight: 600; font-family: var(--font-heading); margin-bottom: 1rem;">$220 <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 450;">/one-time</span></div>
+          <p>Protect your pool layout from heavy fall leaf debris and organic stains. We install leaf traps, balance pH, and inspect heater mechanics.</p>
+          <ul class="package-features" style="margin-bottom: 1.5rem;">
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Leaf catcher netting service</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Skimmer basket clear-outs</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Heater/Heat pump check-up</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Stain prevention chemical feed</li>
+          </ul>
+          <button onclick="selectPackage('autumn')" class="btn btn-primary card-action-btn" style="width: 100%;">Book Autumn Prep <i class="fas fa-calendar-plus"></i></button>
+        </div>
+
+        <!-- Winterizing Close-Down -->
+        <div class="premium-card">
+          <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=600&auto=format&fit=crop" alt="Winterized Swimming Pool">
+          <span class="badge-season winter">Winter Blowout</span>
+          <h3>Winter Close-Down</h3>
+          <div style="font-size: 1.85rem; font-weight: 600; font-family: var(--font-heading); margin-bottom: 1rem;">$290 <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 450;">/one-time</span></div>
+          <p>Prevent frost pipe damage. We blow out all water lines, install expansion plugs, load heavy winter algaecide, and fit custom winter safety covers.</p>
+          <ul class="package-features" style="margin-bottom: 1.5rem;">
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Full line pneumatic blowouts</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Winter freeze plug installation</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Long-life algaecide shock</li>
+            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Cover tension adjustment</li>
+          </ul>
+          <button onclick="selectPackage('winter')" class="btn btn-primary card-action-btn" style="width: 100%;">Book Winterizing <i class="fas fa-calendar-plus"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inclusions Comparison Matrix -->
+  <section class="section-padding" style="background: var(--bg-secondary); transition: background var(--transition-normal);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Comparison Checklist</span>
+        <h2 class="section-title">Package Inclusions Compare</h2>
+        <p>Understand exactly what services are executed in each of our pool season transitions.</p>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Service Details</th>
+              <th>Spring Startup</th>
+              <th>Summer Peak</th>
+              <th>Autumn Prep</th>
+              <th>Winter Close</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Safety Cover Handling & Cleaning</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+            </tr>
+            <tr>
+              <td>Pipe Blowouts & Freeze-plugs</td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+            </tr>
+            <tr>
+              <td>Skimming, Brushing & Vacuuming</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+            </tr>
+            <tr>
+              <td>Water Level Maintenance</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i> (Lowering)</td>
+            </tr>
+            <tr>
+              <td>Algae Chemical Protection</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i> (Shock)</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i> (Stabilizers)</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i> (Inhibitors)</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i> (Winterizer)</td>
+            </tr>
+            <tr>
+              <td>Filter Element Deep Clean</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i> (Weekly flush)</td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+            </tr>
+            <tr>
+              <td>Equipment Room Audit</td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--secondary-light);"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking Form -->
+  <section class="section-padding" id="booking-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Instant Quote Request</span>
+        <h2 class="section-title">Schedule Your Seasonal Service</h2>
+        <p>Submit your pool details below. Our service dispatcher will verify scheduling dates within 24 hours.</p>
+      </div>
+
+      <div class="glass-panel seasonal-form-card">
+        <form class="validated-form" id="seasonalBookingForm">
+          <div class="grid-2" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label for="clientName">Full Name</label>
+              <input type="text" id="clientName" class="form-control" placeholder="Arthur Pendragon" required style="border-radius: 8px;">
+              <span class="error-msg">Name is required.</span>
+            </div>
+            <div class="form-group">
+              <label for="clientEmail">Email Address</label>
+              <input type="email" id="clientEmail" class="form-control" placeholder="arthur@camelot.com" required style="border-radius: 8px;">
+              <span class="error-msg">A valid email address is required.</span>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label for="clientPhone">Phone Number</label>
+              <input type="tel" id="clientPhone" class="form-control" placeholder="(555) 123-4567" required style="border-radius: 8px;">
+              <span class="error-msg">Phone number is required.</span>
+            </div>
+            <div class="form-group">
+              <label for="selectedPackage">Selected Package</label>
+              <select id="selectedPackage" class="form-control" style="border-radius: 8px; width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
+                <option value="spring">Spring Startup ($250)</option>
+                <option value="summer">Peak Summer Care ($190/mo)</option>
+                <option value="autumn">Autumn Preservation ($220)</option>
+                <option value="winter">Winter Close-Down ($290)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label for="poolSize">Approximate Pool Volume (Gallons)</label>
+              <select id="poolSize" style="border-radius: 8px; width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
+                <option value="small">Small (Under 10,000 gal)</option>
+                <option value="medium" selected>Standard (10,000 - 25,000 gal)</option>
+                <option value="large">Estate Large (25,000 - 50,000 gal)</option>
+                <option value="commercial">Olympic/Commercial (Over 50,000 gal)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="targetDate">Requested Service Date</label>
+              <input type="date" id="targetDate" class="form-control" required style="border-radius: 8px; width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
+              <span class="error-msg">Please pick a service date.</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Add-on Custom Services</label>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 0.5rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="addonPowerwash" style="cursor: pointer; width: 18px; height: 18px;"> Powerwash Deck (+$120)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="addonSaltcell" style="cursor: pointer; width: 18px; height: 18px;"> Salt Cell Cleansing (+$75)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="addonFilterwash" style="cursor: pointer; width: 18px; height: 18px;"> Filter Grid Acid Wash (+$150)
+              </label>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <label for="clientNotes">Additional Notes / Instructions</label>
+            <textarea id="clientNotes" rows="4" placeholder="Gate code is #1066. Beware of friendly dog. Filter is located on the north side." style="border-radius: 8px; width: 100%; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color); font-family: inherit; font-size: inherit; padding: 0.75rem 1rem;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Book Selected Program <i class="fas fa-calendar-check"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (SAME ACROSS ALL PAGES) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <i class="fas fa-swimming-pool"></i> AQUA<span>ELITE</span>
+          </a>
+          <p>Experience the ultimate in bespoke pool care and elite spa services. We keep your pristine water safe, sanitary, and spectacularly clear year-round.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home 1</a></li>
+            <li><a href="home-2.html"><i class="fas fa-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="pricing.html"><i class="fas fa-chevron-right"></i> Our Pricing</a></li>
+            <li><a href="seasonal-packages.html"><i class="fas fa-chevron-right"></i> Seasonal Packages</a></li>
+            <li><a href="dashboard.html"><i class="fas fa-chevron-right"></i> Client Portal</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Get in Touch</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Pool Cleaning</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Spa Maintenance</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Water Treatment</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Equipment Repair</a></li>
+            <li><a href="services-details.html"><i class="fas fa-chevron-right"></i> Automation & Lighting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul class="contact-info-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>128 Ocean View Drive, Luxury Heights, CA 90210</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (800) 555-POOL (7665)</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>service@aquaelitepool.com</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 AquaElite Pool & Spa Maintenance Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- JavaScript Bundle -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function selectPackage(season) {
+      const select = document.getElementById('selectedPackage');
+      if (select) {
+        select.value = season;
+      }
+      const formSection = document.getElementById('booking-section');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const nameInput = document.getElementById('clientName');
+          if (nameInput) nameInput.focus();
+        }, 800);
+      }
+    }
+  </script>
+</body>
+</html>

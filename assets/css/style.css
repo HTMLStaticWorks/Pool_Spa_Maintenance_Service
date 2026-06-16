@@ -2675,3 +2675,551 @@ textarea.form-control {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ==========================================================================
+   11. CUSTOM DASHBOARD & SEASONAL PACKAGES STYLES
+   ========================================================================== */
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  .dashboard-layout {
+    grid-template-columns: 2.3fr 1fr;
+  }
+}
+
+.dashboard-section {
+  margin-bottom: 2.5rem;
+}
+
+.dashboard-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboard-section-title i {
+  color: var(--secondary-light);
+}
+
+/* User Profile & Quick Stats Card */
+.dashboard-welcome-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.dashboard-welcome-card::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dashboard-welcome-card h2 {
+  color: #fff;
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-welcome-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+.dashboard-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+}
+
+.quick-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-stat-lbl {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.quick-stat-val {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  color: #fff;
+}
+
+/* Metrics Grid & Cards */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card .metric-icon {
+  font-size: 1.75rem;
+  color: var(--secondary-light);
+  margin-bottom: 0.75rem;
+}
+
+.metric-card h4 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metric-card .metric-value {
+  font-size: 1.85rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  margin-bottom: 0.25rem;
+  color: var(--text-color);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.stable,
+.status-badge.optimal {
+  background: rgba(16, 185, 129, 0.12);
+  color: hsl(150, 80%, 40%);
+}
+
+.status-badge.warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: hsl(35, 90%, 45%);
+}
+
+.status-badge.critical,
+.status-badge.danger {
+  background: rgba(239, 68, 68, 0.12);
+  color: hsl(0, 80%, 50%);
+}
+
+/* Chemical Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+}
+
+.chemical-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: start;
+  font-size: 0.95rem;
+  min-width: 600px;
+}
+
+.chemical-table th,
+.chemical-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chemical-table th {
+  background: var(--bg-secondary);
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: var(--font-heading);
+}
+
+.chemical-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.chemical-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.chemical-table td {
+  color: var(--text-muted);
+}
+
+.chemical-table td strong {
+  color: var(--text-color);
+}
+
+/* Filter Actions */
+.log-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--secondary-color);
+  color: #fff;
+  border-color: var(--secondary-color);
+}
+
+/* Maintenance Report Card */
+.report-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.report-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.report-meta-info {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.report-meta-item {
+  font-size: 0.88rem;
+}
+
+.report-meta-item i {
+  color: var(--secondary-light);
+  margin-right: 0.4rem;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .report-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.report-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.report-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.report-check-item i {
+  color: hsl(150, 80%, 40%);
+  font-size: 1.1rem;
+}
+
+.report-photo-panel {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  border: 1px solid var(--border-color);
+}
+
+.report-photo-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.report-photo-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+[dir="rtl"] .report-photo-label {
+  left: auto;
+  right: 10px;
+}
+
+.report-notes {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-sm);
+  padding: 1.25rem;
+  border-left: 4px solid var(--secondary-color);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--text-color);
+}
+
+[dir="rtl"] .report-notes {
+  border-left: none;
+  border-right: 4px solid var(--secondary-color);
+}
+
+.report-approval-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Scheduler Widget */
+.scheduler-card {
+  padding: 1.75rem;
+}
+
+.scheduler-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scheduler-card h3 i {
+  color: var(--accent-color);
+}
+
+.scheduler-card .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.scheduler-card label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.scheduler-card select,
+.scheduler-card input[type="date"],
+.scheduler-card textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color var(--transition-fast);
+}
+
+.scheduler-card select:focus,
+.scheduler-card input[type="date"]:focus,
+.scheduler-card textarea:focus {
+  border-color: var(--secondary-light);
+}
+
+/* Scheduled Visits List */
+.scheduled-visits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.scheduled-visit-item {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform var(--transition-fast);
+}
+
+.scheduled-visit-item:hover {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .scheduled-visit-item:hover {
+  transform: translateX(-4px);
+}
+
+.visit-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.visit-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Tech profile widget */
+.tech-widget {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--border-radius-md);
+  margin-top: 1.5rem;
+}
+
+.tech-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--secondary-light);
+}
+
+.tech-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tech-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.tech-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.tech-rating {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  margin-top: 0.15rem;
+}
+
+/* Seasonal Packages Form & Page Custom Styling */
+.seasonal-form-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+}
+
+.seasonal-banner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.seasonal-banner-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.seasonal-banner-features li i {
+  color: var(--secondary-light);
+}
+
+.badge-season {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.badge-season.spring {
+  background: rgba(16, 185, 129, 0.15);
+  color: hsl(150, 75%, 38%);
+}
+.badge-season.summer {
+  background: rgba(245, 158, 11, 0.15);
+  color: hsl(35, 85%, 45%);
+}
+.badge-season.autumn {
+  background: rgba(217, 119, 6, 0.15);
+  color: hsl(25, 85%, 45%);
+}
+.badge-season.winter {
+  background: rgba(59, 130, 246, 0.15);
+  color: hsl(220, 85%, 50%);
+}
+
+.btn-select-seasonal {
+  background: var(--bg-secondary);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-select-seasonal:hover,
+.btn-select-seasonal.active {
+  background: var(--secondary-color);
+  color: #fff;
+  border-color: var(--secondary-color);
+}
