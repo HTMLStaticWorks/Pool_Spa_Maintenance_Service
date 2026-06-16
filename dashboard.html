@@ -153,7 +153,7 @@
 
     /* Portal Top Control Bar */
     .portal-top-bar {
-      display: flex;
+      display: none;
       justify-content: space-between;
       align-items: center;
       padding-bottom: 1.5rem;
@@ -161,6 +161,12 @@
       margin-bottom: 2rem;
       flex-wrap: wrap;
       gap: 1rem;
+    }
+
+    @media (max-width: 991px) {
+      .portal-top-bar {
+        display: flex;
+      }
     }
 
     .portal-breadcrumb {
@@ -219,6 +225,11 @@
       margin-bottom: 2rem;
       flex-wrap: wrap;
       gap: 1.5rem;
+    }
+
+    .dashboard-header-actions {
+      display: flex;
+      gap: 0.75rem;
     }
     
     .dashboard-user-meta h1 {
@@ -370,6 +381,120 @@
       left: 5px;
     }
 
+    /* Service Report Layout Styling */
+    .report-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .report-meta-info {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .report-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+
+    .report-meta-item i {
+      color: var(--secondary-light);
+    }
+
+    .report-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .report-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .report-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: var(--text-color);
+    }
+
+    .report-check-item i {
+      color: #10b981;
+      font-size: 1rem;
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+    }
+
+    .report-notes {
+      background: var(--bg-secondary);
+      border-radius: var(--border-radius-sm);
+      padding: 1.25rem;
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--secondary-light);
+    }
+
+    [dir="rtl"] .report-notes {
+      border-left: none;
+      border-right: 3px solid var(--secondary-light);
+    }
+
+    .report-approval-actions {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .report-photo-panel {
+      position: relative;
+      border-radius: var(--border-radius-sm);
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .report-photo-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .report-photo-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(8, 47, 73, 0.85);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+
     /* Responsive Queries for Mobile Sidebar */
     @media (max-width: 991px) {
       .portal-sidebar {
@@ -395,6 +520,101 @@
         display: flex;
       }
     }
+
+    @media (max-width: 575px) {
+      .dashboard-header-flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+      }
+      
+      .dashboard-header-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+      
+      .dashboard-header-actions .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* Stack service report action block on mobile */
+      .report-approval-actions {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 1.25rem;
+      }
+
+      /* Stretches the elements inside signature area */
+      .report-approval-actions > div {
+        max-width: 100% !important;
+        width: 100%;
+      }
+
+      /* Forces text into single line and reduces horizontal space consumption on 320px mobile screens */
+      .report-approval-actions .btn-accent {
+        width: 100%;
+        font-size: 0.8rem !important;
+        padding: 0.75rem 0.65rem !important;
+        white-space: nowrap !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+      }
+
+      .report-card {
+        padding: 1.25rem !important;
+      }
+
+      .report-meta-info {
+        gap: 0.75rem !important;
+      }
+
+      /* Stack the grid cells centered and remove the min-width constraint to prevent card overflow */
+      .report-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+    }
+
+    /* ── 1024 px tablet: center the report approval actions row ── */
+    @media (min-width: 992px) and (max-width: 1100px) {
+      .report-approval-actions {
+        justify-content: center !important;
+        gap: 2rem;
+      }
+
+      #signatureSection {
+        flex-grow: 0 !important;
+        max-width: 280px !important;
+        width: 280px;
+      }
+
+      .report-approval-actions > div:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    /* Portal sections fade-in animation */
+    .portal-section {
+      animation: sectionFadeIn 0.3s ease-out forwards;
+    }
+
+    @keyframes sectionFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
@@ -409,28 +629,36 @@
       </a>
       
       <nav class="portal-nav-links">
-        <a onclick="scrollToSection('overview-section')" class="portal-nav-link active" id="link-overview">
+        <a onclick="showSection('section-overview')" class="portal-nav-link active" id="link-overview">
           <i class="fas fa-chart-pie"></i> Overview
         </a>
-        <a onclick="scrollToSection('chemicals-section')" class="portal-nav-link" id="link-chemicals">
+        <a onclick="showSection('section-chemicals')" class="portal-nav-link" id="link-chemicals">
           <i class="fas fa-flask"></i> Water Chemistry
         </a>
-        <a onclick="scrollToSection('reports-section')" class="portal-nav-link" id="link-reports">
+        <a onclick="showSection('section-reports')" class="portal-nav-link" id="link-reports">
           <i class="fas fa-clipboard-check"></i> Service Reports
         </a>
-        <a onclick="scrollToSection('scheduler-section')" class="portal-nav-link" id="link-scheduler">
+        <a onclick="showSection('section-scheduler')" class="portal-nav-link" id="link-scheduler">
           <i class="fas fa-calendar-alt"></i> Schedule Service
-        </a>
-        <a href="index.html" class="portal-nav-link">
-          <i class="fas fa-home"></i> Back to Website
         </a>
       </nav>
       
-      <!-- CPO Technician profile panel in Sidebar Footer -->
+      <!-- CPO Technician profile panel & Logout in Sidebar Footer -->
       <div class="portal-sidebar-footer">
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem; align-items: center; justify-content: center;">
+          <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+        </div>
+        <a href="index.html" class="portal-nav-link" onclick="logout(event)" style="margin-bottom: 1.25rem; border: 1px solid var(--border-color); border-radius: 8px; justify-content: center; background: rgba(239, 68, 68, 0.06); color: hsl(0, 80%, 60%);">
+          <i class="fas fa-sign-out-alt" style="color: hsl(0, 80%, 60%); margin: 0 0.5rem 0 0;"></i> Logout
+        </a>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <div class="tech-avatar" style="width: 42px; height: 42px; min-width: 42px;">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Lucas Vance, certified pool operator" style="border-radius: 50%;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Lucas Vance, certified pool operator" style="border-radius: 50%; width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="tech-info" style="line-height: 1.35;">
             <h4 style="font-size: 0.88rem; margin: 0; font-weight: 600;">Lucas Vance</h4>
@@ -451,20 +679,6 @@
           <span></span>
           <span></span>
         </div>
-        
-        <div class="portal-breadcrumb">
-          Portal Client / <span>Homeowner Dashboard</span>
-        </div>
-        
-        <div class="portal-top-actions">
-          <button class="toggle-btn theme-toggle" aria-label="Toggle Theme">
-            <i class="fas fa-moon"></i>
-          </button>
-          <button class="toggle-btn rtl-toggle" aria-label="Toggle Layout Direction">
-            <i class="fas fa-exchange-alt"></i>
-          </button>
-          <a href="index.html" class="btn btn-secondary login-nav-btn" onclick="logout(event)" style="padding: 0.55rem 1.25rem !important; font-size: 0.85rem !important;"><i class="fas fa-sign-out-alt"></i> Logout</a>
-        </div>
       </div>
 
       <!-- Welcome Header -->
@@ -473,394 +687,405 @@
           <h1>Welcome back, Arthur</h1>
           <p>Portal account #AE-88402 • Homeowner Site: <strong>128 Ocean View Dr (Estate Pool)</strong></p>
         </div>
-        <div style="display: flex; gap: 0.75rem;">
+        <div class="dashboard-header-actions">
           <a href="pricing.html" class="btn btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;"><i class="fas fa-receipt"></i> View Billing</a>
-          <button onclick="scrollToSection('scheduler-section')" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;"><i class="fas fa-plus"></i> Request Service</button>
+          <button onclick="showSection('section-scheduler')" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;"><i class="fas fa-plus"></i> Request Service</button>
         </div>
       </div>
 
-      <!-- Welcome Banner / Overview Section -->
-      <div class="dashboard-welcome-card" id="overview-section">
-        <h2>Your Pool is in Perfect Balance</h2>
-        <p>Our sanitation algorithm confirms all critical parameters are fully aligned. The water is balanced, sanitized, and completely safe for swimming.</p>
-        <div class="dashboard-quick-stats">
-          <div class="quick-stat-item">
-            <div class="quick-stat-lbl">Overall Health Status</div>
-            <div class="quick-stat-val" style="color: hsl(150, 80%, 45%);"><i class="fas fa-check-circle"></i> Optimal (CPO)</div>
+      <!-- ==================== SECTION 1: OVERVIEW ==================== -->
+      <div id="section-overview" class="portal-section">
+        <!-- Welcome Banner -->
+        <div class="dashboard-welcome-card">
+          <h2>Your Pool is in Perfect Balance</h2>
+          <p>Our sanitation algorithm confirms all critical parameters are fully aligned. The water is balanced, sanitized, and completely safe for swimming.</p>
+          <div class="dashboard-quick-stats">
+            <div class="quick-stat-item">
+              <div class="quick-stat-lbl">Overall Health Status</div>
+              <div class="quick-stat-val" style="color: hsl(150, 80%, 45%);"><i class="fas fa-check-circle"></i> Optimal (CPO)</div>
+            </div>
+            <div class="quick-stat-item">
+              <div class="quick-stat-lbl">Last Valet Visit</div>
+              <div class="quick-stat-val">Yesterday, 2:15 PM</div>
+            </div>
+            <div class="quick-stat-item">
+              <div class="quick-stat-lbl">Next Scheduled Round</div>
+              <div class="quick-stat-val" id="nextVisitDate">Thursday, June 18</div>
+            </div>
+            <div class="quick-stat-item">
+              <div class="quick-stat-lbl">Assigned Valet</div>
+              <div class="quick-stat-val">Lucas Vance, CPO</div>
+            </div>
           </div>
-          <div class="quick-stat-item">
-            <div class="quick-stat-lbl">Last Valet Visit</div>
-            <div class="quick-stat-val">Yesterday, 2:15 PM</div>
+        </div>
+
+        <!-- Dashboard Summary Grid widgets -->
+        <div class="grid-2">
+          <!-- Chemical Parameter Summary Box -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;"><i class="fas fa-vial" style="color: var(--secondary-light); margin-right: 0.5rem;"></i> Water Bio-Chemistry</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6;">Your water parameters were logged yesterday. pH is at <strong>7.4</strong> and Free Chlorine sanitizer is at <strong>2.5 ppm</strong>. No chemical adjustments are required at this time.</p>
+            </div>
+            <button onclick="showSection('section-chemicals')" class="btn btn-secondary" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.55rem 1.25rem; font-size: 0.85rem;">View Analysis Charts</button>
           </div>
-          <div class="quick-stat-item">
-            <div class="quick-stat-lbl">Next Scheduled Round</div>
-            <div class="quick-stat-val" id="nextVisitDate">Thursday, June 18</div>
-          </div>
-          <div class="quick-stat-item">
-            <div class="quick-stat-lbl">Assigned Valet</div>
-            <div class="quick-stat-val">Lucas Vance, CPO</div>
+
+          <!-- Pending Actions Summary Box -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;"><i class="fas fa-tasks" style="color: var(--secondary-light); margin-right: 0.5rem;"></i> Pending Approvals</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6;">Technician Lucas Vance submitted the post-visit maintenance audit report yesterday. Your digital signature is requested to lock the logs.</p>
+            </div>
+            <button onclick="showSection('section-reports')" class="btn btn-primary" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.55rem 1.25rem; font-size: 0.85rem;">Review & Sign Report</button>
           </div>
         </div>
       </div>
 
-      <!-- Main Dashboard Grid Layout -->
-      <div class="dashboard-layout">
-        
-        <!-- Left Side: Chemical Logs & Report Approvals -->
-        <div class="dashboard-main">
+      <!-- ==================== SECTION 2: WATER CHEMISTRY ==================== -->
+      <div id="section-chemicals" class="portal-section" style="display: none;">
+        <!-- Live Chemical Parameters -->
+        <div class="dashboard-section">
+          <h3 class="dashboard-section-title"><i class="fas fa-tint"></i> Live Chemical Parameters</h3>
           
-          <!-- Section 1: Chemical Quality Status Metrics -->
-          <div class="dashboard-section" id="chemicals-section">
-            <h3 class="dashboard-section-title"><i class="fas fa-tint"></i> Live Chemical Parameters</h3>
+          <div class="metrics-grid">
+            <!-- pH Card -->
+            <div class="glass-panel metric-card">
+              <i class="fas fa-vial metric-icon" style="color: #6366f1;"></i>
+              <h4>pH Balance</h4>
+              <div class="metric-value">7.4</div>
+              <span class="status-badge optimal">Optimal</span>
+            </div>
             
-            <div class="metrics-grid">
-              <!-- pH Card -->
-              <div class="glass-panel metric-card">
-                <i class="fas fa-vial metric-icon" style="color: #6366f1;"></i>
-                <h4>pH Balance</h4>
-                <div class="metric-value">7.4</div>
-                <span class="status-badge optimal">Optimal</span>
-              </div>
-              
-              <!-- Chlorine Card -->
-              <div class="glass-panel metric-card">
-                <i class="fas fa-biohazard metric-icon" style="color: #10b981;"></i>
-                <h4>Free Chlorine</h4>
-                <div class="metric-value">2.5 <span style="font-size: 0.75rem; color: var(--text-muted);">ppm</span></div>
-                <span class="status-badge optimal">Optimal</span>
-              </div>
-
-              <!-- Alkalinity Card -->
-              <div class="glass-panel metric-card">
-                <i class="fas fa-atom metric-icon" style="color: #f59e0b;"></i>
-                <h4>Alkalinity</h4>
-                <div class="metric-value">95 <span style="font-size: 0.75rem; color: var(--text-muted);">ppm</span></div>
-                <span class="status-badge stable">Stable</span>
-              </div>
-
-              <!-- Temperature Card -->
-              <div class="glass-panel metric-card">
-                <i class="fas fa-thermometer-half metric-icon" style="color: #ef4444;"></i>
-                <h4>Water Temp</h4>
-                <div class="metric-value">78°F</div>
-                <span class="status-badge stable">Perfect</span>
-              </div>
+            <!-- Chlorine Card -->
+            <div class="glass-panel metric-card">
+              <i class="fas fa-biohazard metric-icon" style="color: #10b981;"></i>
+              <h4>Free Chlorine</h4>
+              <div class="metric-value">2.5 <span style="font-size: 0.75rem; color: var(--text-muted);">ppm</span></div>
+              <span class="status-badge optimal">Optimal</span>
             </div>
 
-            <!-- Chemical Trend Chart Widget -->
-            <div class="chart-container">
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Water Stability Index (pH Trend)</h4>
-              <p style="font-size: 0.82rem; margin-bottom: 1rem;">Daily readings mapped across the past 7 service visits. Target pH envelope is 7.2 - 7.6.</p>
-              
-              <!-- Grid line markers -->
-              <div class="mock-chart-visual">
-                <div class="mock-chart-gridline" style="top: 25%;"></div> <!-- 7.6 Line -->
-                <div class="mock-chart-gridline" style="top: 50%;"></div> <!-- 7.4 Line -->
-                <div class="mock-chart-gridline" style="top: 75%;"></div> <!-- 7.2 Line -->
-                
-                <!-- Week 1 -->
-                <div class="chart-bar-wrapper">
-                  <div class="chart-bar" style="height: 60%;">
-                    <div class="chart-bar-tooltip">pH: 7.3 (Stable)</div>
-                  </div>
-                  <div class="chart-label">Jun 01</div>
-                </div>
+            <!-- Alkalinity Card -->
+            <div class="glass-panel metric-card">
+              <i class="fas fa-atom metric-icon" style="color: #f59e0b;"></i>
+              <h4>Alkalinity</h4>
+              <div class="metric-value">95 <span style="font-size: 0.75rem; color: var(--text-muted);">ppm</span></div>
+              <span class="status-badge stable">Stable</span>
+            </div>
 
-                <!-- Week 2 -->
-                <div class="chart-bar-wrapper">
-                  <div class="chart-bar" style="height: 70%;">
-                    <div class="chart-bar-tooltip">pH: 7.4 (Optimal)</div>
-                  </div>
-                  <div class="chart-label">Jun 03</div>
-                </div>
-
-                <!-- Week 3 -->
-                <div class="chart-bar-wrapper">
-                  <div class="chart-bar" style="height: 85%;">
-                    <div class="chart-bar-tooltip">pH: 7.6 (High limit)</div>
-                  </div>
-                  <div class="chart-label">Jun 06</div>
-                </div>
-
-                <!-- Week 4 -->
-                <div class="chart-bar-wrapper">
-                  <div class="chart-bar" style="height: 55%;">
-                    <div class="chart-bar-tooltip">pH: 7.2 (Low limit)</div>
-                  </div>
-                  <div class="chart-label">Jun 08</div>
-                </div>
-
-                <!-- Week 5 -->
-                <div class="chart-bar-wrapper">
-                  <div class="chart-bar" style="height: 65%;">
-                    <div class="chart-bar-tooltip">pH: 7.3 (Stable)</div>
-                  </div>
-                  <div class="chart-label">Jun 10</div>
-                </div>
-
-                <!-- Week 6 -->
-                <div class="chart-bar-wrapper">
-                  <div class="chart-bar" style="height: 70%;">
-                    <div class="chart-bar-tooltip">pH: 7.4 (Optimal)</div>
-                  </div>
-                  <div class="chart-label">Jun 13</div>
-                </div>
-
-                <!-- Week 7 -->
-                <div class="chart-bar-wrapper">
-                  <div class="chart-bar" style="height: 72%; background: var(--accent-color);">
-                    <div class="chart-bar-tooltip">pH: 7.45 (Optimal)</div>
-                  </div>
-                  <div class="chart-label">Yesterday</div>
-                </div>
-              </div>
+            <!-- Temperature Card -->
+            <div class="glass-panel metric-card">
+              <i class="fas fa-thermometer-half metric-icon" style="color: #ef4444;"></i>
+              <h4>Water Temp</h4>
+              <div class="metric-value">78°F</div>
+              <span class="status-badge stable">Perfect</span>
             </div>
           </div>
 
-          <!-- Section 2: Chemical Log History Table -->
-          <div class="dashboard-section">
-            <h3 class="dashboard-section-title"><i class="fas fa-history"></i> Chemical Treatment Logs</h3>
+          <!-- Chemical Trend Chart Widget -->
+          <div class="chart-container">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Water Stability Index (pH Trend)</h4>
+            <p style="font-size: 0.82rem; margin-bottom: 1rem;">Daily readings mapped across the past 7 service visits. Target pH envelope is 7.2 - 7.6.</p>
             
-            <div class="log-filters">
-              <button onclick="filterLogs('all')" class="filter-btn active" id="btn-filter-all">All History</button>
-              <button onclick="filterLogs('stable')" class="filter-btn" id="btn-filter-stable">Stable Only</button>
-              <button onclick="filterLogs('attention')" class="filter-btn" id="btn-filter-attention">Attention Required</button>
-            </div>
+            <!-- Grid line markers -->
+            <div class="mock-chart-visual">
+              <div class="mock-chart-gridline" style="top: 25%;"></div> <!-- 7.6 Line -->
+              <div class="mock-chart-gridline" style="top: 50%;"></div> <!-- 7.4 Line -->
+              <div class="mock-chart-gridline" style="top: 75%;"></div> <!-- 7.2 Line -->
+              
+              <!-- Week 1 -->
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar" style="height: 60%;">
+                  <div class="chart-bar-tooltip">pH: 7.3 (Stable)</div>
+                </div>
+                <div class="chart-label">Jun 01</div>
+              </div>
 
-            <div class="table-responsive">
-              <table class="chemical-table" id="chemicalLogsTable">
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>valet CPO</th>
-                    <th>Free Cl (ppm)</th>
-                    <th>pH Level</th>
-                    <th>Alkalinity (ppm)</th>
-                    <th>Cyanuric Acid</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- Log 1 -->
-                  <tr data-status="stable">
-                    <td><strong>Yesterday, 14:15</strong></td>
-                    <td>Lucas Vance</td>
-                    <td>2.50</td>
-                    <td>7.45</td>
-                    <td>95</td>
-                    <td>42 ppm</td>
-                    <td><span class="status-badge optimal">Optimal</span></td>
-                  </tr>
-                  <!-- Log 2 -->
-                  <tr data-status="stable">
-                    <td><strong>Jun 13, 2026</strong></td>
-                    <td>Lucas Vance</td>
-                    <td>2.40</td>
-                    <td>7.40</td>
-                    <td>92</td>
-                    <td>42 ppm</td>
-                    <td><span class="status-badge optimal">Optimal</span></td>
-                  </tr>
-                  <!-- Log 3 -->
-                  <tr data-status="stable">
-                    <td><strong>Jun 10, 2026</strong></td>
-                    <td>Lucas Vance</td>
-                    <td>2.20</td>
-                    <td>7.30</td>
-                    <td>90</td>
-                    <td>40 ppm</td>
-                    <td><span class="status-badge stable">Stable</span></td>
-                  </tr>
-                  <!-- Log 4 -->
-                  <tr data-status="attention">
-                    <td><strong>Jun 08, 2026</strong></td>
-                    <td>Lucas Vance</td>
-                    <td>1.10</td>
-                    <td>7.20</td>
-                    <td>85</td>
-                    <td>38 ppm</td>
-                    <td><span class="status-badge warning">Low Chlorine</span></td>
-                  </tr>
-                  <!-- Log 5 -->
-                  <tr data-status="stable">
-                    <td><strong>Jun 06, 2026</strong></td>
-                    <td>Lucas Vance</td>
-                    <td>2.90</td>
-                    <td>7.60</td>
-                    <td>98</td>
-                    <td>38 ppm</td>
-                    <td><span class="status-badge stable">Stable</span></td>
-                  </tr>
-                  <!-- Log 6 -->
-                  <tr data-status="attention">
-                    <td><strong>Jun 03, 2026</strong></td>
-                    <td>Lucas Vance</td>
-                    <td>4.20</td>
-                    <td>7.80</td>
-                    <td>115</td>
-                    <td>35 ppm</td>
-                    <td><span class="status-badge danger">pH Spike</span></td>
-                  </tr>
-                  <!-- Log 7 -->
-                  <tr data-status="stable">
-                    <td><strong>Jun 01, 2026</strong></td>
-                    <td>Lucas Vance</td>
-                    <td>2.30</td>
-                    <td>7.35</td>
-                    <td>90</td>
-                    <td>35 ppm</td>
-                    <td><span class="status-badge optimal">Optimal</span></td>
-                  </tr>
-                </tbody>
-              </table>
+              <!-- Week 2 -->
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar" style="height: 70%;">
+                  <div class="chart-bar-tooltip">pH: 7.4 (Optimal)</div>
+                </div>
+                <div class="chart-label">Jun 03</div>
+              </div>
+
+              <!-- Week 3 -->
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar" style="height: 85%;">
+                  <div class="chart-bar-tooltip">pH: 7.6 (High limit)</div>
+                </div>
+                <div class="chart-label">Jun 06</div>
+              </div>
+
+              <!-- Week 4 -->
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar" style="height: 55%;">
+                  <div class="chart-bar-tooltip">pH: 7.2 (Low limit)</div>
+                </div>
+                <div class="chart-label">Jun 08</div>
+              </div>
+
+              <!-- Week 5 -->
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar" style="height: 65%;">
+                  <div class="chart-bar-tooltip">pH: 7.3 (Stable)</div>
+                </div>
+                <div class="chart-label">Jun 10</div>
+              </div>
+
+              <!-- Week 6 -->
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar" style="height: 70%;">
+                  <div class="chart-bar-tooltip">pH: 7.4 (Optimal)</div>
+                </div>
+                <div class="chart-label">Jun 13</div>
+              </div>
+
+              <!-- Week 7 -->
+              <div class="chart-bar-wrapper">
+                <div class="chart-bar" style="height: 72%; background: var(--accent-color);">
+                  <div class="chart-bar-tooltip">pH: 7.45 (Optimal)</div>
+                </div>
+                <div class="chart-label">Yesterday</div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <!-- Section 3: Pending Maintenance Reports -->
-          <div class="dashboard-section" id="reports-section">
-            <h3 class="dashboard-section-title"><i class="fas fa-clipboard-check"></i> Pending Service Reports</h3>
-            
-            <div class="glass-panel report-card" id="activeReportCard">
-              <div class="report-header-flex">
-                <div>
-                  <h4 style="font-size: 1.2rem; margin-bottom: 0.15rem;">Valet Maintenance & Chemistry Audit</h4>
-                  <p style="font-size: 0.85rem;">Job ID: #RPT-55291 • Completed: June 15, 2026</p>
-                </div>
-                <div id="reportStatusBadge"><span class="status-badge warning" style="font-size: 0.85rem;"><i class="fas fa-clock"></i> Awaiting Approval</span></div>
-              </div>
+        <!-- Chemical Log History Table -->
+        <div class="dashboard-section">
+          <h3 class="dashboard-section-title"><i class="fas fa-history"></i> Chemical Treatment Logs</h3>
+          
+          <div class="log-filters">
+            <button onclick="filterLogs('all')" class="filter-btn active" id="btn-filter-all">All History</button>
+            <button onclick="filterLogs('stable')" class="filter-btn" id="btn-filter-stable">Stable Only</button>
+            <button onclick="filterLogs('attention')" class="filter-btn" id="btn-filter-attention">Attention Required</button>
+          </div>
 
-              <div class="report-meta-info">
-                <div class="report-meta-item"><i class="fas fa-user-cog"></i> Technician: <strong>Lucas Vance (CPO #99281)</strong></div>
-                <div class="report-meta-item"><i class="fas fa-clock"></i> Duration: <strong>55 Minutes</strong></div>
-                <div class="report-meta-item"><i class="fas fa-fill-drip"></i> Pool Volume: <strong>24,000 Gallons</strong></div>
-              </div>
+          <div class="table-responsive">
+            <table class="chemical-table" id="chemicalLogsTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>valet CPO</th>
+                  <th>Free Cl (ppm)</th>
+                  <th>pH Level</th>
+                  <th>Alkalinity (ppm)</th>
+                  <th>Cyanuric Acid</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="stable">
+                  <td><strong>Yesterday, 14:15</strong></td>
+                  <td>Lucas Vance</td>
+                  <td>2.50</td>
+                  <td>7.45</td>
+                  <td>95</td>
+                  <td>42 ppm</td>
+                  <td><span class="status-badge optimal">Optimal</span></td>
+                </tr>
+                <tr data-status="stable">
+                  <td><strong>Jun 13, 2026</strong></td>
+                  <td>Lucas Vance</td>
+                  <td>2.40</td>
+                  <td>7.40</td>
+                  <td>92</td>
+                  <td>42 ppm</td>
+                  <td><span class="status-badge optimal">Optimal</span></td>
+                </tr>
+                <tr data-status="stable">
+                  <td><strong>Jun 10, 2026</strong></td>
+                  <td>Lucas Vance</td>
+                  <td>2.20</td>
+                  <td>7.30</td>
+                  <td>90</td>
+                  <td>40 ppm</td>
+                  <td><span class="status-badge stable">Stable</span></td>
+                </tr>
+                <tr data-status="attention">
+                  <td><strong>Jun 08, 2026</strong></td>
+                  <td>Lucas Vance</td>
+                  <td>1.10</td>
+                  <td>7.20</td>
+                  <td>85</td>
+                  <td>38 ppm</td>
+                  <td><span class="status-badge warning">Low Chlorine</span></td>
+                </tr>
+                <tr data-status="stable">
+                  <td><strong>Jun 06, 2026</strong></td>
+                  <td>Lucas Vance</td>
+                  <td>2.90</td>
+                  <td>7.60</td>
+                  <td>98</td>
+                  <td>38 ppm</td>
+                  <td><span class="status-badge stable">Stable</span></td>
+                </tr>
+                <tr data-status="attention">
+                  <td><strong>Jun 03, 2026</strong></td>
+                  <td>Lucas Vance</td>
+                  <td>4.20</td>
+                  <td>7.80</td>
+                  <td>115</td>
+                  <td>35 ppm</td>
+                  <td><span class="status-badge danger">pH Spike</span></td>
+                </tr>
+                <tr data-status="stable">
+                  <td><strong>Jun 01, 2026</strong></td>
+                  <td>Lucas Vance</td>
+                  <td>2.30</td>
+                  <td>7.35</td>
+                  <td>90</td>
+                  <td>35 ppm</td>
+                  <td><span class="status-badge optimal">Optimal</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
-              <div class="report-grid">
-                <!-- Checklist tasks -->
-                <div>
-                  <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Completed Tasks Checklist</h4>
-                  <div class="report-checklist">
-                    <div class="report-check-item"><i class="fas fa-check-circle"></i> Complete underwater sediment vacuuming</div>
-                    <div class="report-check-item"><i class="fas fa-check-circle"></i> Wall scrubbing & water line tile polish</div>
-                    <div class="report-check-item"><i class="fas fa-check-circle"></i> Emptied skimmer baskets (moderate pine needles)</div>
-                    <div class="report-check-item"><i class="fas fa-check-circle"></i> Pump hair trap cleared and o-ring lubricated</div>
-                    <div class="report-check-item"><i class="fas fa-check-circle"></i> Backwashed sand filter unit (cleared micro-dust)</div>
-                    <div class="report-check-item"><i class="fas fa-check-circle"></i> Salt generator plate scaling check (Clean)</div>
-                    <div class="report-check-item"><i class="fas fa-check-circle"></i> Adjusted liquid chlorine auto-doser feed rate</div>
-                  </div>
-                </div>
-
-                <!-- Media photo -->
-                <div>
-                  <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Post-Service Validation Photo</h4>
-                  <div class="report-photo-panel">
-                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600&auto=format&fit=crop" alt="Pristine Pool Visual Validation">
-                    <div class="report-photo-label">CPO Validated Visual</div>
-                  </div>
-                </div>
-              </div>
-
+      <!-- ==================== SECTION 3: SERVICE REPORTS ==================== -->
+      <div id="section-reports" class="portal-section" style="display: none;">
+        <div class="dashboard-section">
+          <h3 class="dashboard-section-title"><i class="fas fa-clipboard-check"></i> Pending Service Reports</h3>
+          
+          <div class="glass-panel report-card" id="activeReportCard">
+            <div class="report-header-flex">
               <div>
-                <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--text-muted);">Technician Visit Notes</h4>
-                <div class="report-notes">
-                  "Water quality looks exceptionally clear today. I noticed some pine needles in the west skimmer due to high winds, which I've cleared out. I adjusted the chlorine dosing levels slightly up to counter the direct solar temperature rise. The main pump pressure is perfectly stable at 15 PSI after the filter backwash. All clean and ready for your family's swimming enjoyment!"
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.15rem;">Valet Maintenance & Chemistry Audit</h4>
+                <p style="font-size: 0.85rem;">Job ID: #RPT-55291 • Completed: June 15, 2026</p>
+              </div>
+              <div id="reportStatusBadge"><span class="status-badge warning" style="font-size: 0.85rem;"><i class="fas fa-clock"></i> Awaiting Approval</span></div>
+            </div>
+
+            <div class="report-meta-info">
+              <div class="report-meta-item"><i class="fas fa-user-cog"></i> Technician: <strong>Lucas Vance (CPO #99281)</strong></div>
+              <div class="report-meta-item"><i class="fas fa-clock"></i> Duration: <strong>55 Minutes</strong></div>
+              <div class="report-meta-item"><i class="fas fa-fill-drip"></i> Pool Volume: <strong>24,000 Gallons</strong></div>
+            </div>
+
+            <div class="report-grid">
+              <!-- Checklist tasks -->
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Completed Tasks Checklist</h4>
+                <div class="report-checklist">
+                  <div class="report-check-item"><i class="fas fa-check-circle"></i> Complete underwater sediment vacuuming</div>
+                  <div class="report-check-item"><i class="fas fa-check-circle"></i> Wall scrubbing & water line tile polish</div>
+                  <div class="report-check-item"><i class="fas fa-check-circle"></i> Emptied skimmer baskets (moderate pine needles)</div>
+                  <div class="report-check-item"><i class="fas fa-check-circle"></i> Pump hair trap cleared and o-ring lubricated</div>
+                  <div class="report-check-item"><i class="fas fa-check-circle"></i> Backwashed sand filter unit (cleared micro-dust)</div>
+                  <div class="report-check-item"><i class="fas fa-check-circle"></i> Salt generator plate scaling check (Clean)</div>
+                  <div class="report-check-item"><i class="fas fa-check-circle"></i> Adjusted liquid chlorine auto-doser feed rate</div>
                 </div>
               </div>
 
-              <!-- Approval Action Box -->
-              <div class="report-approval-actions" id="approvalActionsContainer">
-                <div style="flex-grow: 1; max-width: 300px;" id="signatureSection">
-                  <label style="display: block; font-size: 0.8rem; margin-bottom: 0.25rem; color: var(--text-muted);">Client Digitized Signature / Acknowledgement</label>
-                  <div class="signature-area" onclick="triggerDrawSignature()">
-                    <span class="signature-badge">Tap to Sign</span>
-                    <span id="signatureDrawText" style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">Arthur Pendragon</span>
-                  </div>
+              <!-- Media photo -->
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Post-Service Validation Photo</h4>
+                <div class="report-photo-panel">
+                  <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600&auto=format&fit=crop" alt="Pristine Pool Visual Validation">
+                  <div class="report-photo-label">CPO Validated Visual</div>
                 </div>
-                <div>
-                  <button onclick="approveReport()" class="btn btn-accent" style="padding: 0.85rem 2rem;"><i class="fas fa-file-signature"></i> Approve Maintenance Report</button>
+              </div>
+            </div>
+
+            <div>
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--text-muted);">Technician Visit Notes</h4>
+              <div class="report-notes">
+                "Water quality looks exceptionally clear today. I noticed some pine needles in the west skimmer due to high winds, which I've cleared out. I adjusted the chlorine dosing levels slightly up to counter the direct solar temperature rise. The main pump pressure is perfectly stable at 15 PSI after the filter backwash. All clean and ready for your family's swimming enjoyment!"
+              </div>
+            </div>
+
+            <!-- Approval Action Box -->
+            <div class="report-approval-actions" id="approvalActionsContainer">
+              <div style="flex-grow: 1; max-width: 300px;" id="signatureSection">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 0.25rem; color: var(--text-muted);">Client Digitized Signature / Acknowledgement</label>
+                <div class="signature-area" onclick="triggerDrawSignature()">
+                  <span class="signature-badge">Tap to Sign</span>
+                  <span id="signatureDrawText" style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">Arthur Pendragon</span>
                 </div>
+              </div>
+              <div>
+                <button onclick="approveReport()" class="btn btn-accent" style="padding: 0.85rem 2rem;"><i class="fas fa-file-signature"></i> Approve Maintenance Report</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Right Side: Sidebar scheduler -->
-        <div class="dashboard-sidebar">
+      <!-- ==================== SECTION 4: SCHEDULE SERVICE ==================== -->
+      <div id="section-scheduler" class="portal-section" style="display: none;">
+        <div class="dashboard-section">
+          <h3 class="dashboard-section-title"><i class="fas fa-calendar-alt"></i> Schedule Maintenance & Repairs</h3>
           
-          <!-- Scheduling Card -->
-          <div class="glass-panel scheduler-card" id="scheduler-section">
-            <h3><i class="fas fa-calendar-alt"></i> Schedule Service</h3>
-            
-            <form class="validated-form" id="dashboardScheduleForm">
-              <div class="form-group">
-                <label for="serviceType">Service Type Needed</label>
-                <select id="serviceType" style="width: 100%;">
-                  <option value="Valet Cleaning">Routine Valet Cleaning</option>
-                  <option value="Filter Clean">Filter Deep Chemical Wash</option>
-                  <option value="Equipment Check">Equipment Mechanical Audit</option>
-                  <option value="Algae Treatment">Shock & Green-To-Clean</option>
-                  <option value="Leak Detection">Acoustic Leak Check</option>
-                  <option value="Other Service">Other Custom Request</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="requestedDate">Target Service Date</label>
-                <input type="date" id="requestedDate" class="form-control" required>
-                <span class="error-msg">Please pick a service date.</span>
-              </div>
-
-              <div class="form-group">
-                <label for="timeSlot">Preferred Time Slot</label>
-                <select id="timeSlot" style="width: 100%;">
-                  <option value="Morning (8:00 AM - 12:00 PM)">Morning (8 AM - 12 PM)</option>
-                  <option value="Afternoon (12:00 PM - 4:00 PM)" selected>Afternoon (12 PM - 4 PM)</option>
-                  <option value="Late Day (4:00 PM - 6:00 PM)">Late Day (4 PM - 6 PM)</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="visitNotes">Instructions for Technician</label>
-                <textarea id="visitNotes" rows="3" placeholder="Please double check the pool heater timer settings. Thanks!"></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-calendar-check"></i> Book Appointment</button>
-            </form>
-          </div>
-
-          <!-- Scheduled Appointments sidebar list -->
-          <div class="dashboard-section" style="margin-top: 2rem;">
-            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-              <i class="fas fa-calendar-day" style="color: var(--secondary-light);"></i> Booked Service Rounds
-            </h4>
-            
-            <div class="scheduled-visits-list" id="scheduledVisitsContainer">
-              <!-- Item 1 -->
-              <div class="scheduled-visit-item">
-                <div class="visit-info">
-                  <h4>Regular Valet Cleaning</h4>
-                  <p><i class="far fa-calendar-alt"></i> June 18, 2026 (Afternoon)</p>
+          <div class="grid-2">
+            <!-- Left Column: The Form -->
+            <div class="glass-panel scheduler-card" style="padding: 2rem; height: 100%;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-clock" style="color: var(--secondary-light);"></i> Book Appointment</h3>
+              <form class="validated-form" id="dashboardScheduleForm">
+                <div class="form-group">
+                  <label for="serviceType">Service Type Needed</label>
+                  <select id="serviceType" style="width: 100%;">
+                    <option value="Valet Cleaning">Routine Valet Cleaning</option>
+                    <option value="Filter Clean">Filter Deep Chemical Wash</option>
+                    <option value="Equipment Check">Equipment Mechanical Audit</option>
+                    <option value="Algae Treatment">Shock & Green-To-Clean</option>
+                    <option value="Leak Detection">Acoustic Leak Check</option>
+                    <option value="Other Service">Other Custom Request</option>
+                  </select>
                 </div>
-                <span class="status-badge stable" style="font-size: 0.7rem;">Confirmed</span>
-              </div>
 
-              <!-- Item 2 -->
-              <div class="scheduled-visit-item">
-                <div class="visit-info">
-                  <h4>Regular Valet Cleaning</h4>
-                  <p><i class="far fa-calendar-alt"></i> June 25, 2026 (Afternoon)</p>
+                <div class="form-group">
+                  <label for="requestedDate">Target Service Date</label>
+                  <input type="date" id="requestedDate" class="form-control" required>
+                  <span class="error-msg">Please pick a service date.</span>
                 </div>
-                <span class="status-badge stable" style="font-size: 0.7rem;">Scheduled</span>
+
+                <div class="form-group">
+                  <label for="timeSlot">Preferred Time Slot</label>
+                  <select id="timeSlot" style="width: 100%;">
+                    <option value="Morning (8:00 AM - 12:00 PM)">Morning (8 AM - 12 PM)</option>
+                    <option value="Afternoon (12:00 PM - 4:00 PM)" selected>Afternoon (12 PM - 4 PM)</option>
+                    <option value="Late Day (4:00 PM - 6:00 PM)">Late Day (4 PM - 6 PM)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="visitNotes">Instructions for Technician</label>
+                  <textarea id="visitNotes" rows="3" placeholder="Please double check the pool heater timer settings. Thanks!"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-calendar-check"></i> Book Appointment</button>
+              </form>
+            </div>
+
+            <!-- Right Column: Booked Visits -->
+            <div class="glass-panel" style="padding: 2rem; height: 100%;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-calendar-check" style="color: var(--secondary-light);"></i> Booked Service Rounds</h3>
+              <div class="scheduled-visits-list" id="scheduledVisitsContainer">
+                <div class="scheduled-visit-item">
+                  <div class="visit-info">
+                    <h4>Regular Valet Cleaning</h4>
+                    <p><i class="far fa-calendar-alt"></i> June 18, 2026 (Afternoon)</p>
+                  </div>
+                  <span class="status-badge stable" style="font-size: 0.7rem;">Confirmed</span>
+                </div>
+
+                <div class="scheduled-visit-item">
+                  <div class="visit-info">
+                    <h4>Regular Valet Cleaning</h4>
+                    <p><i class="far fa-calendar-alt"></i> June 25, 2026 (Afternoon)</p>
+                  </div>
+                  <span class="status-badge stable" style="font-size: 0.7rem;">Scheduled</span>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
       
       <!-- Compact Portal Footer -->
-      <footer style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 3.5rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); background: transparent;">
+      <footer style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: auto; text-align: center; font-size: 0.85rem; color: var(--text-muted); background: transparent;">
         <p>&copy; 2026 AquaElite Pool Client Portal. All rights reserved.</p>
       </footer>
       
@@ -894,31 +1119,46 @@
       }
     }
 
-    // Scroll to specific section and highlight nav link
-    function scrollToSection(id) {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        
-        // Update active class
-        document.querySelectorAll('.portal-nav-link').forEach(link => {
-          link.classList.remove('active');
-        });
-        
-        const linkId = 'link-' + id.split('-')[0];
-        const activeLink = document.getElementById(linkId);
-        if (activeLink) {
-          activeLink.classList.add('active');
-        }
-        
-        // Close mobile sidebar if open
-        const sidebar = document.getElementById('portalSidebar');
-        const hamburger = document.getElementById('portalHamburger');
-        if (sidebar && sidebar.classList.contains('active')) {
-          sidebar.classList.remove('active');
-          hamburger.classList.remove('active');
-        }
+    // Tab switcher logic: Show chosen section, hide others, update sidebar highlighting
+    function showSection(sectionId) {
+      // Hide all portal-section divs
+      document.querySelectorAll('.portal-section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+
+      // Show targeted portal-section
+      const targetSec = document.getElementById(sectionId);
+      if (targetSec) {
+        targetSec.style.display = 'block';
       }
+
+      // Update sidebar highlighting classes
+      document.querySelectorAll('.portal-nav-link').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // Map sectionId back to sidebar link ID
+      let linkId = '';
+      if (sectionId === 'section-overview') linkId = 'link-overview';
+      else if (sectionId === 'section-chemicals') linkId = 'link-chemicals';
+      else if (sectionId === 'section-reports') linkId = 'link-reports';
+      else if (sectionId === 'section-scheduler') linkId = 'link-scheduler';
+
+      const activeLink = document.getElementById(linkId);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+
+      // Automatically collapse sidebar on mobile after clicking
+      const sidebar = document.getElementById('portalSidebar');
+      const hamburger = document.getElementById('portalHamburger');
+      if (sidebar && sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+
+      // Return viewport to top of content
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Toast Notification helper
@@ -957,7 +1197,6 @@
       }
       
       if (!isSignatureDrawn) {
-        // Auto sign on click to make it easier for user to approve
         triggerDrawSignature();
       }
 
@@ -983,7 +1222,6 @@
 
     // Log Table Filtering
     function filterLogs(status) {
-      // Toggle button active class
       document.querySelectorAll('.log-filters button').forEach(btn => {
         btn.classList.remove('active');
       });
@@ -1025,15 +1263,12 @@
 
       const container = document.getElementById('scheduledVisitsContainer');
       if (container) {
-        // Parse date for display
         const dateObj = new Date(dateInput.value);
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const formattedDate = dateObj.toLocaleDateString('en-US', options);
         
-        // Split time slot to simplified text
         const slotText = slotSelect.value.split(' ')[0];
 
-        // Create new element
         const visitDiv = document.createElement('div');
         visitDiv.className = 'scheduled-visit-item';
         visitDiv.style.borderLeft = '3px solid var(--accent-color)';
@@ -1045,18 +1280,14 @@
           <span class="status-badge warning" style="font-size: 0.7rem; animation: pulse 2s infinite;">Pending</span>
         `;
         
-        // Insert at the top of the container
         container.insertBefore(visitDiv, container.firstChild);
         
-        // Update next scheduled date card indicator
         const nextVisitIndicator = document.getElementById('nextVisitDate');
         if (nextVisitIndicator) {
           nextVisitIndicator.textContent = `${dateObj.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}`;
         }
 
         showToast("Service request booked successfully. CPO assigned!");
-        
-        // Reset form
         this.reset();
       }
     });
